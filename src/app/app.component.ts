@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// component [html+css] + code[classes] + decorators
+
+import { Component } from "@angular/core";
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl:'./app.component.html',
+  styleUrls:['./app.component.css'],
+  standalone: true,
 })
 export class AppComponent {
-  title = 'my-first';
+  pageheading:string='Product details';
+  isStatus:boolean=true;
+
+  getheader():string{
+    return this.pageheading +' // component to view';
+  }
 }
